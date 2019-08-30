@@ -23,16 +23,21 @@ class App extends Component {
   }
 }
 
-const AppNavigator = createStackNavigator({
-  App: {
-    screen: App,
+class Signup extends Component {
+  render() {
+    return <SignUp />;
+  }
+}
+
+const AppNavigator = createStackNavigator(
+  {
+    Home: App,
+    Signup: SignUp
   },
-  SignUp: {
-    screen: SignUp,
-  }, 
-}, {
-    initialRouteName: 'App',
-});
+  {
+    initialRouteName: "Home"
+  }
+)
 
 
 const styles = StyleSheet.create({
