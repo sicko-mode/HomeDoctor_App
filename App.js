@@ -46,7 +46,7 @@ class SignUp extends Component {
           style={styles_signup.input}
           placeholder='Username'
           autoCapitalize="none"
-          placeholderTextColor='white'
+          placeholderTextColor='#42A5F5'
           onChangeText={val => this.onChangeText('username', val)}
         />
         <TextInput
@@ -54,21 +54,21 @@ class SignUp extends Component {
           placeholder='Password'
           secureTextEntry={true}
           autoCapitalize="none"
-          placeholderTextColor='white'
+          placeholderTextColor='#42A5F5'
           onChangeText={val => this.onChangeText('password', val)}
         />
         <TextInput
           style={styles_signup.input}
           placeholder='Email'
           autoCapitalize="none"
-          placeholderTextColor='white'
+          placeholderTextColor='#42A5F5'
           onChangeText={val => this.onChangeText('email', val)}
         />
         <TextInput
           style={styles_signup.input}
           placeholder='Phone Number'
           autoCapitalize="none"
-          placeholderTextColor='white'
+          placeholderTextColor='#42A5F5'
           onChangeText={val => this.onChangeText('phone_number', val)}
         />
         <Button
@@ -105,16 +105,17 @@ const styles_signup = StyleSheet.create({
   input: {
     width: 350,
     height: 55,
-    backgroundColor: '#42A5F5',
+    backgroundColor:'#FFFFFF',
     margin: 10,
     padding: 8,
-    color: 'white',
+    color: '#42A5F5',
     borderRadius: 14,
     fontSize: 18,
     fontWeight: '500',
   },
   container: {
     flex: 1,
+    backgroundColor: '#42A5F5',
     justifyContent: 'center',
     alignItems: 'center'
   }
