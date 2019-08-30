@@ -12,7 +12,7 @@ class App extends Component {
             this.props.navigation.dispatch(StackActions.reset({
               index: 0,
               actions: [
-                NavigationActions.navigate({ routeName: 'Details' })
+                NavigationActions.navigate({ routeName: 'SIGNUP' })
               ],
             }))
           }}
@@ -43,14 +43,14 @@ class SignUp extends Component {
     return (
       <View style={styles_signup.container}>
         <TextInput
-          style={styles.input}
+          style={styles_signup.input}
           placeholder='Username'
           autoCapitalize="none"
           placeholderTextColor='white'
           onChangeText={val => this.onChangeText('username', val)}
         />
         <TextInput
-          style={styles.input}
+          style={styles_signup.input}
           placeholder='Password'
           secureTextEntry={true}
           autoCapitalize="none"
@@ -58,14 +58,14 @@ class SignUp extends Component {
           onChangeText={val => this.onChangeText('password', val)}
         />
         <TextInput
-          style={styles.input}
+          style={styles_signup.input}
           placeholder='Email'
           autoCapitalize="none"
           placeholderTextColor='white'
           onChangeText={val => this.onChangeText('email', val)}
         />
         <TextInput
-          style={styles.input}
+          style={styles_signup.input}
           placeholder='Phone Number'
           autoCapitalize="none"
           placeholderTextColor='white'
