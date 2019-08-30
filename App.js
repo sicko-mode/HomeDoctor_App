@@ -25,10 +25,10 @@ class App extends Component {
 
 const AppNavigator = createStackNavigator({
   App: {
-    screen: App
+    screen: App,
   },
   SignUp: {
-    screen: SignUp
+    screen: SignUp,
   }, 
 }, {
     initialRouteName: 'App',
