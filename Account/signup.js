@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Button, TextInput, StyleSheet } from 'react-native'
 
 
-export default class SignUp extends React.Component {
+class SignUp extends React.Component {
   state = {
     username: '', password: '', email: '', phone_number: ''
   }
