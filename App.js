@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
+import { SignUp } from "./Account/signup";
 
-
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Splash Screen</Text>
+        <Button
+          title="Sign Up"
+          onPress={() => {
+            this.props.navigation.dispatch(StackActions.reset({
+              index: 0,
+              actions: [
+                NavigationActions.navigate({ routeName: 'SignUp'})
+              ],
+            }))
+          }}
+        />
      </View> 
     );
   }
 }
 
+const AppNavigator = createStackNavigator({
+  App: {
+    screen: App
+  },
+  SignUp: {
+    screen: SignUp
+  }, 
+}, {
+    initialRouteName: 'App',
+});
 
 
 const styles = StyleSheet.create({
@@ -23,3 +43,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default createAppContainer(AppNavigator);
